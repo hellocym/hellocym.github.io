@@ -120,6 +120,11 @@
 		    	return mug1[randomNum(1,mug1.length)-1];
 		    }
 		    
+		    function posGenerate(){
+		    	var pos1 = new Array("东","南","西","北","东南","西南","西北","东北");
+		    	return pos1[randomNum(1,pos1.length)-1];
+		    }
+		    
 			function displayDate(){
 				var d = new Date();
 				document.getElementById("demo").innerHTML="今天是";
@@ -133,6 +138,9 @@
 				document.getElementById("demo").innerHTML+="推荐："+"<br>";
 				document.getElementById("demo").innerHTML+="今日音游：";
 				document.getElementById("demo").innerHTML+=mugGenerate();
+				document.getElementById("demo").innerHTML+="<br>"
+				document.getElementById("demo").innerHTML+="砸手机或平板音游最佳朝向：";
+				document.getElementById("demo").innerHTML+=posGenerate();
 			}
 			 
 		</script>
