@@ -125,11 +125,22 @@ var _hmt = _hmt || [];
 <p>也可以创建多个对象</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Message</span>:</span>	<span class="comment"># 定义类</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, content</span>):</span></span><br><span class="line">        self.data = content</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">send_email</span>(<span class="params">self, email</span>):</span>	<span class="comment"># 定义方法</span></span><br><span class="line">        data = <span class="string">f&#x27;Send email &quot;<span class="subst">&#123;self.data&#125;</span>&quot; to <span class="subst">&#123;email&#125;</span>&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(data)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">send_wechat</span>(<span class="params">self, wid</span>):</span>	<span class="comment"># 定义方法</span></span><br><span class="line">        data = <span class="string">f&#x27;Send wechat &quot;<span class="subst">&#123;self.data&#125;</span>&quot; to <span class="subst">&#123;wid&#125;</span>&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(data)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">msg_object = Message(<span class="string">&#x27;spam&#x27;</span>)	<span class="comment"># 实例化一个对象</span></span><br><span class="line">msg_object.send_email(<span class="string">&#x27;example@example.com&#x27;</span>)</span><br><span class="line">msg_object.send_wechat(<span class="string">&#x27;example114514&#x27;</span>)</span><br><span class="line"></span><br><span class="line">login_object = Message(<span class="string">&#x27;login&#x27;</span>)	<span class="comment"># 实例化一个对象</span></span><br><span class="line">login_object.send_email(<span class="string">&#x27;example@example.com&#x27;</span>)</span><br><span class="line">login_object.send_wechat(<span class="string">&#x27;example114514&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
+<p>self本质是调用方法的对象</p>
+<p>对象是类实例化出来的一块内存区域，经过类的<code>__init__</code>方法可以初始化</p>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3><h3 id="1-3-应用"><a href="#1-3-应用" class="headerlink" title="1.3 应用"></a>1.3 应用</h3><ol>
+<li><p>将数据封装到一个对象中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserInfo</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, pwd, age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.password = pwd</span><br><span class="line">        self.age = age</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    user_object_list = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        user_name = <span class="built_in">input</span>(<span class="string">&#x27;Input Username (Input Q to Quit): &#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> user_name.upper() == <span class="string">&#x27;Q&#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        pwd = <span class="built_in">input</span>(<span class="string">&#x27;Input Password: &#x27;</span>)</span><br><span class="line">        age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;Input Your Age: &#x27;</span>))</span><br><span class="line">        </span><br><span class="line">        user_object = UserInfo(user_name, pwd, age)</span><br><span class="line">        user_object_list.append(user_object)</span><br><span class="line">            </span><br><span class="line">	<span class="keyword">for</span> obj <span class="keyword">in</span> user_object_list:</span><br><span class="line">        <span class="built_in">print</span>(obj.name, obj.password, obj.age)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以规范数据</p>
+</li>
+<li><p>将数据封装到对象中，方便方法调用处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pagination</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, page, num_per_page=<span class="number">10</span></span>):</span></span><br><span class="line">        self.num_per_page = num_per_page</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> page.isdecimal():</span><br><span class="line">            self.page = <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        page = <span class="built_in">int</span>(page)</span><br><span class="line">        </span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/22/OOP/" data-id="ckypw7idt0004twuxb4tzbpv1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/22/OOP/" data-id="ckyq35mon0003jgux25il1x7e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-OOP/" rel="tag">python, OOP</a></li></ul>
@@ -176,7 +187,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/day3/" data-id="ckypw7idk0000twuxhspz121s" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/19/day3/" data-id="ckyq35mog0000jgux8jtxfxd7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
@@ -212,7 +223,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/test/" data-id="ckypw7ids0003twux50lbevqo" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/19/test/" data-id="ckyq35moq0006jgux4f1q6cx0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -261,7 +272,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/hello-world/" data-id="ckypw7idu0005twux8v8bclut" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/19/hello-world/" data-id="ckyq35moo0004jguxcnxs9pux" class="article-share-link">Share</a>
       
       
     </footer>
