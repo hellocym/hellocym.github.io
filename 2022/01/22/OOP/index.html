@@ -5,14 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>面向对象编程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="123456class Foo(object):    def func(self):        print(&quot;something&quot;)       obj &#x3D; Foo()obj.func()    1. 面向对象通过面向对象实现功能的步骤：  定义类，在类中定义方法  实例化一个对象，通过对象调用并执行方法   12345678class Message:	# 定义类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象编程">
+<meta property="og:url" content="http://example.com/2022/01/22/OOP/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="123456class Foo(object):    def func(self):        print(&quot;something&quot;)       obj &#x3D; Foo()obj.func()    1. 面向对象通过面向对象实现功能的步骤：  定义类，在类中定义方法  实例化一个对象，通过对象调用并执行方法   12345678class Message:	# 定义类">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-01-22T05:31:19.000Z">
+<meta property="article:modified_time" content="2022-01-22T06:33:18.952Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python, OOP">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -71,9 +76,7 @@ var _hmt = _hmt || [];
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-OOP" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-OOP" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/01/22/OOP/" class="article-date">
   <time datetime="2022-01-22T05:31:19.000Z" itemprop="datePublished">2022-01-22</time>
@@ -86,8 +89,8 @@ var _hmt = _hmt || [];
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/22/OOP/">面向对象编程</a>
+    <h1 class="article-title" itemprop="name">
+      面向对象编程
     </h1>
   
 
@@ -133,141 +136,19 @@ var _hmt = _hmt || [];
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-day3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/19/day3/" class="article-date">
-  <time datetime="2022-01-19T10:50:26.000Z" itemprop="datePublished">2022-01-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/19/day3/">Python中的逻辑运算符的运算</a>
-    </h1>
+    <a href="/2022/01/19/day3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python中的逻辑运算符的运算</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Python-中的逻辑运算符的运算"><a href="#Python-中的逻辑运算符的运算" class="headerlink" title="Python 中的逻辑运算符的运算"></a>Python 中的逻辑运算符的运算</h1><ul>
-<li><p>or: 如果左值为True，则表达式的值为左值；否则为右值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;def&#x27;</span> 	<span class="comment"># &#x27;abc&#x27;</span></span><br><span class="line"><span class="string">&#x27;abc&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;&#x27;</span> 	<span class="comment"># &#x27;abc&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;def&#x27;</span> 	<span class="comment"># &#x27;def&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;</span> <span class="keyword">or</span> <span class="number">0</span>			<span class="comment"># 0</span></span><br></pre></td></tr></table></figure></li>
-<li><p>and: 如果左值为False，则表达式的值为左值；否则为右值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc&#x27;</span> <span class="keyword">and</span> <span class="string">&#x27;def&#x27;</span> 	<span class="comment"># &#x27;def&#x27;</span></span><br><span class="line"><span class="string">&#x27;abc&#x27;</span> <span class="keyword">and</span> <span class="string">&#x27;&#x27;</span> 		<span class="comment"># &#x27;&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;</span> <span class="keyword">and</span> <span class="string">&#x27;def&#x27;</span> 		<span class="comment"># &#x27;&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;</span> <span class="keyword">and</span> <span class="number">0</span>			<span class="comment"># &#x27;&#x27;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>not: 只返回布尔值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> <span class="number">8</span> 	<span class="comment"># False</span></span><br><span class="line"><span class="keyword">not</span> <span class="string">&#x27;&#x27;</span> 	<span class="comment"># True</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>三者之间的优先级顺序： not &gt; and &gt; or</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/day3/" data-id="ckypggcc30000poux7k13hc38" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/19/test/" class="article-date">
-  <time datetime="2022-01-19T03:21:41.858Z" itemprop="datePublished">2022-01-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>三个字</p>
-<ul>
-<li>小黑点（ctrl+shift+]）</li>
-</ul>
-<h2 id="1-第一点"><a href="#1-第一点" class="headerlink" title="1.第一点"></a>1.第一点</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123123123</span><br></pre></td></tr></table></figure>
-
-<p>图片</p>
-<p><img src="/images/test/image-20220119111627900.png" alt="image-20220119111627900"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/test/" data-id="ckypggccb0004poux17lcc94h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/19/hello-world/" class="article-date">
-  <time datetime="2022-01-19T01:39:01.163Z" itemprop="datePublished">2022-01-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/19/hello-world/" data-id="ckypggcc70001pouxeghegm8r" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
